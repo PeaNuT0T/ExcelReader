@@ -10,12 +10,12 @@ public class Main {
     public static final String File_Path = "C:\\Users\\97687\\Desktop\\target.xlsx";
     public static void main(String[] args) throws IOException, InvalidFormatException {
     Main main = new Main();
-        // ´ÓExcelÎÄ¼şÖĞ´´½¨Ò»¸ö¹¤×÷²¾
+        // ä»Excelæ–‡ä»¶ä¸­åˆ›å»ºä¸€ä¸ªå·¥ä½œç°¿
         Workbook workbook = WorkbookFactory.create(new File(File_Path));
 
-        // ÏÔÊ¾ÎÄ¼şÒ³Êı
+        // æ˜¾ç¤ºæ–‡ä»¶é¡µæ•°
         //System.out.println("Workbook has " + workbook.getNumberOfSheets() + " Sheets : ");
-        //µü´úĞĞÓëÁĞ
+        //è¿­ä»£è¡Œä¸åˆ—
         Iterator<Sheet> sheetIterator = workbook.sheetIterator();
         //while (sheetIterator.hasNext()) 
         //{
@@ -23,10 +23,10 @@ public class Main {
             //System.out.println("=> " + sheet.getSheetName());
         //}
 
-        // È¡µÃµÚÒ»Ò³
+        // å–å¾—ç¬¬ä¸€é¡µ
         Sheet sheet = workbook.getSheetAt(0);
 
-        // ´´½¨Ò»¸ö¸ñÊ½»¯¹¤¾ß
+        // åˆ›å»ºä¸€ä¸ªæ ¼å¼åŒ–å·¥å…·
         DataFormatter dataFormatter = new DataFormatter();
 
         List<CellBody> cellArray = new ArrayList<CellBody>();
@@ -40,23 +40,23 @@ public class Main {
         List<Cell> cellArray6 = new ArrayList<Cell>();
         List<Cell> cellArray7 = new ArrayList<Cell>();
         Iterator<Row> rowIterator = sheet.rowIterator();
-        //¸¸ÀàĞÅÏ¢
+        //çˆ¶ç±»ä¿¡æ¯
         //String store = "";
         
         
         
-      //µü´úÃ¿ĞĞ
+      //è¿­ä»£æ¯è¡Œ
         while (rowIterator.hasNext()) 
         {
-        	int col = 0; //±íÊ¾ÁĞ²¢·Ö¼¶
-            Row row = rowIterator.next();//ÏÂÒ»ĞĞ
+        	int col = 0; //è¡¨ç¤ºåˆ—å¹¶åˆ†çº§
+            Row row = rowIterator.next();//ä¸‹ä¸€è¡Œ
             Iterator<Cell> cellIterator = row.cellIterator();
             while (cellIterator.hasNext()) 
             {
                 Cell cell = cellIterator.next();
                 if (cell.getStringCellValue() != null && cell.getStringCellValue().length() != 0)
                 {
-                	String cellValue = cell.getRichStringCellValue().getString();//¶ÁÈ¡µ¥Ôª¸ñÄÚÈİ
+                	String cellValue = cell.getRichStringCellValue().getString();//è¯»å–å•å…ƒæ ¼å†…å®¹
                 	//store = cellValue;
 							if (col == 0) {
 								cellArray0.add(cell);
@@ -136,11 +136,11 @@ public class Main {
         
         	
         
-        // ¹Ø±Õ¹¤×÷²¾
+        // å…³é—­å·¥ä½œç°¿
         workbook.close();
     }
     
-//¿ÉÒÔÊ¹ÓÃ´Ëº¯ÊıÀ´´òÓ¡³öÃ¿¸öµ¥Ôª¸ñµÄĞÅÏ¢
+//å¯ä»¥ä½¿ç”¨æ­¤å‡½æ•°æ¥æ‰“å°å‡ºæ¯ä¸ªå•å…ƒæ ¼çš„ä¿¡æ¯
     private String printCellValue(Cell cell) 
     {
         return(cell.getRichStringCellValue().getString());
