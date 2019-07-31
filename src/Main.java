@@ -28,6 +28,7 @@ public class Main {
         List<CellBody> cellArray5 = new ArrayList<CellBody>();
         List<CellBody> cellArray6 = new ArrayList<CellBody>();
         List<CellBody> cellArray7 = new ArrayList<CellBody>();
+        List<link> linkArray = new ArrayList<link>();
         Iterator<Row> rowIterator = sheet.rowIterator();
 
         
@@ -102,6 +103,8 @@ public class Main {
 									if (col == 7) {
 										cellArray7.add(target);
 									}
+				link thelink = new link(target.getNum(),target.getFather().getNum());
+				linkArray.add(thelink);
                 cellArray.add(target);
                 cellNumber++;
                 }
@@ -110,9 +113,10 @@ public class Main {
             	rowNum++;
               }
         
-        //for (int i = 0; i < cellArray.size(); i++) {
-			System.out.println(cellArray.get(5633).getWord());  //输出所有父类信息
-		//}	
+        for (int i = 0; i < linkArray.size(); i++) 
+        {
+			System.out.println("Source: " + linkArray.get(i).getSource() + " Target: " + linkArray.get(i).getTarget());  //输出所有父类信息
+		}
        
         workbook.close(); // 关闭工作簿
     }
