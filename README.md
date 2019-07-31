@@ -2,6 +2,7 @@
 by Talon Huang
 
 >This Execl-file reader was coded with Java using Apache POI package.
+
 >It reads and analyzes a tree-structured Excel file which contains a semantic net for Artificial Intelligence.
 
 To run this program, you will need:
