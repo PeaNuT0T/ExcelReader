@@ -1,7 +1,8 @@
 # ExcelReader
 by Talon Huang
 
-An Execl-file reader coded with Java using Apache POI package .
+>This Execl-file reader was coded with Java using Apache POI package.
+>It reads and analyzes a tree-structured Excel file which contains a semantic net for Artificial Intelligence.
 
 To run this program, you will need:
 1) Apache POI jar files: https://poi.apache.org/
