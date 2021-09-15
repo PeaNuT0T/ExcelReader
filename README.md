@@ -1,5 +1,5 @@
 # ExcelReader
-by Talon Huang
+by Billy Huang
 
 >This Execl-file reader was coded with Java using Apache POI package.
 
@@ -10,7 +10,7 @@ To run this program, you will need:
 2) A Java IDE
 3) An Excel file and its location
 
-This program is written for Guangzhou Giantan Information Technology Co., Ltd.
+This code was written for Guangzhou Giantan Information Technology Co., Ltd.
 
 > 极天信息是国内领先的人工智能公司，多年持续专注自然语言
 > 处理核心技术的研发，致力用先进的人工智能技术与行业结合，
@@ -22,6 +22,6 @@ This program is written for Guangzhou Giantan Information Technology Co., Ltd.
 
 ### Tech
 
-This program uses a number of Apache POI jar files to work properly, and the program itself is open source with a [public repository][dill] on GitHub.
+This code uses a number of Apache POI jar files to work properly, and the program itself is open source with a [public repository][dill] on GitHub.
 
    [dill]: <https://github.com/PeaNuT0T/ExcelReader>
